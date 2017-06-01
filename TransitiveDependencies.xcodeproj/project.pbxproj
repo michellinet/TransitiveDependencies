@@ -14,6 +14,7 @@
 		01BC379B1EC37B1600B421CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BC37991EC37B1600B421CF /* LaunchScreen.storyboard */; };
 		01BC37A61EC37B1600B421CF /* TransitiveDependenciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BC37A51EC37B1600B421CF /* TransitiveDependenciesTests.swift */; };
 		01BC37B11EC37B1600B421CF /* TransitiveDependenciesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BC37B01EC37B1600B421CF /* TransitiveDependenciesUITests.swift */; };
+		01BC37BF1EC37CC400B421CF /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BC37BE1EC37CC400B421CF /* Dependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		01BC37AC1EC37B1600B421CF /* TransitiveDependenciesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitiveDependenciesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BC37B01EC37B1600B421CF /* TransitiveDependenciesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitiveDependenciesUITests.swift; sourceTree = "<group>"; };
 		01BC37B21EC37B1600B421CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01BC37BE1EC37CC400B421CF /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				01BC37971EC37B1600B421CF /* Assets.xcassets */,
 				01BC37991EC37B1600B421CF /* LaunchScreen.storyboard */,
 				01BC379C1EC37B1600B421CF /* Info.plist */,
+				01BC37BE1EC37CC400B421CF /* Dependencies.swift */,
 			);
 			path = TransitiveDependencies;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BC37BF1EC37CC400B421CF /* Dependencies.swift in Sources */,
 				01BC37931EC37B1600B421CF /* ViewController.swift in Sources */,
 				01BC37911EC37B1600B421CF /* AppDelegate.swift in Sources */,
 			);

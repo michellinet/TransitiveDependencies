@@ -25,12 +25,46 @@ class TransitiveDependenciesTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testBasic() {
+        let dep = Dependencies()
+        dep.addDirect(node: "A", dependencies: ["B", "C"])
+        let actual = dep.dependenciesFor(node: "A")
+        let expected = ["B", "C"]
+
+        XCTAssertEqual(expected, actual)
+
     }
-    
+
+    func testTwo(){
+        let dep = Dependencies()
+        dep.addDirect(node: "B", dependencies: ["C", "E"])
+        let actual = dep.dependenciesFor(node: "B")
+        let expected = ["C", "E"]
+
+        XCTAssertEqual(expected, actual)
+    }
+
+    func testTransitive(){
+        let dep = Dependencies()
+        dep.addDirect(node: "A", dependencies: ["B","C"])
+        dep.addDirect(node: "B", dependencies: ["C", "E"])
+        let actual = dep.dependenciesFor(node: "A")
+        let expected = ["B", "C", "E"]
+
+        XCTAssertEqual(expected, actual)
+    }
+
+    func testTwoLayersOfTransitivity(){
+        let dep = Dependencies()
+        dep.addDirect(node: "A", dependencies: ["B","C"])
+        dep.addDirect(node: "B", dependencies: ["C", "E"])
+        dep.addDirect(node: "E", dependencies: ["F"])
+        let actual = dep.dependenciesFor(node: "A")
+        let expected = ["B", "C", "E", "F"]
+
+        XCTAssertEqual(expected, actual)
+    }
+
+
 }
