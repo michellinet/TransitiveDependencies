@@ -26,6 +26,7 @@ class Dependencies {
         for dependency in masterList {
             if node == dependency.node {
                 transitiveList.append(contentsOf: dependency.dependencies)
+                break
             }
         }
 
@@ -46,6 +47,8 @@ class Dependencies {
                             addToList(list: [element])
                         }
                     }
+
+                    break
                 }
             }
 
